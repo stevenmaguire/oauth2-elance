@@ -114,11 +114,11 @@ class ElanceTest extends \PHPUnit_Framework_TestCase
         $user = $this->provider->getResourceOwner($token);
 
         $this->assertEquals($userId, $user->getId());
-        $this->assertEquals($userId, $user->toArray()['id']);
+        $this->assertEquals($userId, $user->toArray()['data']['providerProfile']['userId']);
         $this->assertEquals($username, $user->getUsername());
-        $this->assertEquals($username, $user->toArray()['username']);
+        $this->assertEquals($username, $user->toArray()['data']['providerProfile']['userName']);
         $this->assertEquals($picture, $user->getAvatarUrl());
-        $this->assertEquals($picture, $user->toArray()['avatar_url']);
+        $this->assertEquals($picture, $user->toArray()['data']['providerProfile']['logo']);
     }
 
     /**

@@ -58,10 +58,6 @@ class ElanceResourceOwner implements ResourceOwnerInterface
      */
     public function toArray()
     {
-        return [
-            'id' => $this->getId(),
-            'username' => $this->getUsername(),
-            'avatar_url' => $this->getAvatarUrl(),
-        ];
+        return $this->response;
     }
 }
