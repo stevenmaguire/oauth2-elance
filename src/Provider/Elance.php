@@ -83,7 +83,8 @@ class Elance extends AbstractProvider
         if (isset($data['errors'])) {
             throw new IdentityProviderException(
                 $response->getReasonPhrase(),
-                $response->getStatusCode(), $response
+                $response->getStatusCode(),
+                $response
             );
         }
     }
