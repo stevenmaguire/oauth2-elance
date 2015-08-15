@@ -70,6 +70,11 @@ if (!isset($_GET['code'])) {
     echo $token->getToken();
 }
 ```
+#### Important note about the Elance API
+
+This package attempts to use the [/profiles/my](https://www.elance.com/q/api2/methods/profiles/my) API endpoint to populate the `ElanceResourceOwner` object. This attempt will be successful if the resource owner has a "Contractor Profile" on Elance. If the resource owner does not have a "Contractor Profile" the request for this information will result in a 404 response and the code example above will fail.
+
+The request to `getAccessToken` will succeed regardless of "Contractor Profile" status.
 
 ### Refreshing a Token
 
