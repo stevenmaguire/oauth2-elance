@@ -94,7 +94,7 @@ class Elance extends AbstractProvider
      *
      * @param object $response
      * @param AccessToken $token
-     * @return League\OAuth2\Client\Provider\ResourceOwnerInterface
+     * @return ElanceResourceOwner
      */
     protected function createResourceOwner(array $response, AccessToken $token)
     {
